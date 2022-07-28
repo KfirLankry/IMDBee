@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" />
+    <meta property="og:title" content="IMDEEb" />
+    <meta property="og:type" content="Website" />
+    <meta
+      property="og:description"
+      content="The World's Most Popular And Autoritative Source For Movie, TV And Celebrity Content."
+    />
+    <meta property="og:image" content="imgs/thumbnail.jpg" />
+    <meta property="og:url" content="http://imdeeb.netlify.app/" />
+    <meta name="theme-color" content="#ffcf00" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>
+      IMDBee: Ratings, Reviews, and Where to Watch the Best Movies ...
+    </title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- NavBar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-light">
+      <div class="container">
+        <div class="bumblebee">
+          <a class="navbar-brand" href="index.html"
+            ><img class="bee" src="imgs/bee.png" alt="" />
+            <span class="beeSpan">IMDBee</span></a
+          >
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <form class="d-flex" role="profile">
+            <div class="profile">
+              <span class="text-white">Kfir Lankry </span>
+              <img class="profilePic" src="imgs/Profile.jpg" alt="" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Web Description text -->
+    <div class="container-fluid" id="_main">
+      <div class="big-tittle pt-5 text-center text-white">
+        <h2 class="_title_">The World's Most Popular And Autoritative</h2>
+        <h2 class="_title_">
+          Source For <span class="bold">Movie</span>,<span class="bold">
+            TV</span
+          >
+          And<span class="bold"> Celebrity</span>
+          Content.
+        </h2>
+      </div>
+      <div id="app" class="container mt-4">
+        <div class="section top">
+          <!-- Search Bar -->
+          <div class="input-group">
+            <input
+              id="search-field"
+              type="search"
+              class="input_control"
+              placeholder="Find Movies, TV Shows and more..."
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              id="search-btn"
+              class="btn btn-warning"
+              type="button"
+              id="button-addon2"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <p id="message" class="text-center text-danger mt-2"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Section -->
+    <div class="container section center mt-5">
+      <div class="ribbonbox">
+        <div class="ribbon-2"></div>
+      </div>
+      <div class="top_text">
+        <h1 id="movieTitle"></h1>
+        <span id="_rating"></span>
+      </div>
+      <id class="main_image">
+        <img src="" id="mainPoster" />
+      </id>
+      <div class="row">
+        <div class="rightColumn col-lg-6 col-md-6">
+          <div class="body_text mt-3">
+            <i class="fa-solid fa-align-left"> </i>
+            <h5 class="boxtitle" style="display: inline">Description</h5>
+            <p id="desc"></p>
+            <i class="fa-solid fa-user-group"> </i>
+            <h5 class="boxtitle" style="display: inline">Actors</h5>
+            <p id="actors"></p>
+            <i class="fa-solid fa-user"></i>
+            <h5 class="boxtitle" style="display: inline">Directors</h5>
+            <p id="directors"></p>
+            <i class="fa-solid fa-award"> </i>
+            <h5 class="boxtitle" style="display: inline">Awards</h5>
+            <p id="awards"></p>
+          </div>
+        </div>
+        <div class="leftColumn col-lg-6 col-md-6">
+          <div class="body_text mt-3">
+            <i class="fa-solid fa-language"></i>
+            <h5 class="boxtitle" style="display: inline">Languages</h5>
+            <p id="language"></p>
+            <i class="fa-solid fa-calendar-days"> </i>
+            <h5 class="boxtitle" style="display: inline">Release Date</h5>
+            <p id="releasedate"></p>
+            <i class="fa-solid fa-clapperboard"> </i>
+            <h5 class="boxtitle" style="display: inline">Genre</h5>
+            <p id="genre"></p>
+            <i class="fa-regular fa-clock"></i>
+            <h5 class="boxtitle" style="display: inline">Movie Length</h5>
+            <p id="runtime"></p>
+            <i class="fa-solid fa-building-circle-arrow-right"></i>
+            <h5 class="boxtitle" style="display: inline">Distributed By</h5>
+            <p id="productionCompany"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Spinner -->
+    <div class="spinner-border" role="status" id="loader"></div>
+
+    <!-- Bottom Section -->
+    <div class="container mt-5" id="smilier-title">
+      <h2 class="text-center mt-1 moreLikeThis">
+        <span class="h2Span">More Like This</span>
+      </h2>
+    </div>
+    <div class="container section bottom"></div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto pt-3">
+      <p class="copyright">
+        Coded & Designed with
+        <i class="fa-solid fa-heart" style="color: red"> </i> By:
+        <a href="https://kfirlankry.netlify.app/" target="_blank"
+          >Kfir Lankry</a
+        >
+      </p>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
