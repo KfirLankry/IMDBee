@@ -26,4 +26,4 @@ Author: Kfir Lankry
 ![IMDBee](https://github.com/KfirLankry/IMDBee/blob/main/imgs/screenshot_1.jpg?raw=true) 
 ***
 ![IMDBee](https://github.com/KfirLankry/IMDBee/blob/main/imgs/screenshot_2.jpg?raw=true)  
-***
+
