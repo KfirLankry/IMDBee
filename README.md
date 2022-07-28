@@ -19,7 +19,7 @@ To run this app, you'll need a [IMDB](https://imdb-api.com) API key.
 
 ## More Info: 
 Development Field: Front-End  
-Live Web: https://imdbee.netlify.app/ 
+Live Web: https://imdbee.netlify.app/  
 Author: Kfir Lankry  
 
 ## Screenshots:  
